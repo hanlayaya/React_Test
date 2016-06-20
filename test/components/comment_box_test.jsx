@@ -16,7 +16,6 @@ describe('this tests is for commentbox', () => {
     });
 
     it('has a textarea ? ', ()=> {
-
         expect(component.find('textarea')).to.exist;
     });
 
@@ -24,5 +23,19 @@ describe('this tests is for commentbox', () => {
 
         expect(component.find('button')).to.exist;
     });
+
+    describe('entering some text', () => {
+        beforeEach(() => {
+            component.find('textarea').simulate('change', 'new comment');
+        });
+
+        it('shows the text in the textarea', () => {
+            expect(component.find('textarea')).to.have.value('new comment');
+        });
+
+        it('when submited ,clears the input', () => {
+
+        });
+    })
 
 });
