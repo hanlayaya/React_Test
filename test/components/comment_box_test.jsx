@@ -1,7 +1,7 @@
 import {renderComponent, expect} from "../test_helper";
 import CommentBox from "../../src/components/comment_box";
 
-describe('this tests is for commentbox', () => {
+describe('Comment_Box_Test', () => {
     let component;
 
     beforeEach(
@@ -21,7 +21,7 @@ describe('this tests is for commentbox', () => {
 
     it('has a button', ()=> {
 
-        expect(component.find('button')).to.exist;
+        expect(component.find('button')).to.exist; //test for element.
     });
 
     describe('entering some text', () => {
@@ -30,12 +30,12 @@ describe('this tests is for commentbox', () => {
         });
 
         it('shows the text in the textarea', () => {
-            expect(component.find('textarea')).to.have.value('new comment');
+            expect(component.find('textarea')).to.have.value('new comment'); //test for value of element.
         });
 
         it('when submited ,clears the input', () => {
             component.simulate('submit');
-            expect(component.find('textarea')).to.have.value('');
+            expect(component.find('textarea')).to.have.value(''); //test for action for form .
         });
     })
 

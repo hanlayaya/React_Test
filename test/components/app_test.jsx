@@ -11,4 +11,8 @@ describe('App', () => {
     it('renders something', () => {
         expect(component.find('.comment-box')).to.exist;
     });
+
+    it('has a child element with class .comment-lsit ', () => {
+        expect(component.find('.comment-list')).to.exist;
+    })
 });
