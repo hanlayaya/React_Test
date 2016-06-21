@@ -34,7 +34,8 @@ describe('this tests is for commentbox', () => {
         });
 
         it('when submited ,clears the input', () => {
-
+            component.simulate('submit');
+            expect(component.find('textarea')).to.have.value('');
         });
     })
 
